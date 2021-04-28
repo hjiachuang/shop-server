@@ -73,6 +73,10 @@ module.exports = appInfo => {
     fileSize: '10mb',
   };
 
+  exports.static = {
+    prefix: '/',
+  };
+
   return {
     ...config,
     ...userConfig,
