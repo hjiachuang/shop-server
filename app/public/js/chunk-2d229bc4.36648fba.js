@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d229bc4"],{df5a:function(n,c,e){"use strict";e.r(c);var o=e("7a23");function t(n,c){return Object(o["openBlock"])(),Object(o["createBlock"])("div",null,"这是订单详情页")}const r={};r.render=t;c["default"]=r}}]);
+//# sourceMappingURL=chunk-2d229bc4.36648fba.js.map
