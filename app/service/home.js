@@ -6,8 +6,17 @@ const moment = require('moment');
 class HomeService extends Service {
   async info() {
     const { ctx, app } = this;
-    const goodsOnsale = await app.mysql.select('goods', { is_on_sale: 1, is_delete: 0 });
-    const orderToDelivery = await app.mysql.select('order', { order_status: 300 });
+    const goodsOnsale = await app.mysql.select('goods', {
+      where: {
+        is_on_sale: 1,
+        is_delete: 0,
+      },
+    });
+    const orderToDelivery = await app.mysql.select('order', {
+      where: {
+        order_status: 300,
+      },
+    });
     const user = await app.mysql.select('user');
     ctx.service.common.success(0, {
       goodsOnsale: goodsOnsale.length,
